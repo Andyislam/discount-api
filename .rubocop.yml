@@ -1,0 +1,58 @@
+Metrics/LineLength:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+# These metrics produce too many false positives 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+# FIXME: Comments can be added later
+Documentation:
+    Enabled: false
+
+ClassAndModuleChildren:
+    Enabled: false
+
+# FIXME: OK while in development
+Lint/UnusedMethodArgument:
+  Exclude:  
+    - "app/concepts/**/*"
+
+# FIXME: Ok while in development
+Lint/UnreachableCode:
+  Exclude:
+    - "app/concepts/**/*"
+
+# unnecessary in test folders
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "test/**/*"
+    - "*.gemspec" # definitely not in the gemspec
+
+# unnecessary in this folder
+Metrics:
+  Exclude:
+    - "bin/bundle"
+    - "bin/**/*"
+
+# unnecessary in this folder
+Naming:
+  Exclude:
+    - "spec/**/*"
+
+# unnecessary in this folder
+Style:
+  Exclude:
+    - "spec/**/*"
